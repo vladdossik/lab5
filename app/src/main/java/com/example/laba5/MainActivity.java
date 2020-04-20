@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;
     private ViewPager viewPager;
     private TabItem tab1, tab2;
-   // private SectionsPagerAdapter pagerAdapter;
+    private PagerAdapter pagerAdapter;
     public final static String USER_ID ="user4358497563948543";
     public final static String URL = "https://api.thecatapi.com/v1/";
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         tab1 = (TabItem)findViewById(R.id.tab1);
         tab2 = (TabItem)findViewById(R.id.tab2);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-        pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabs.getTabCount());
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabs.getTabCount());
         viewPager.setAdapter(pagerAdapter);
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
