@@ -12,16 +12,18 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.laba5.MainActivity;
+import com.example.laba5.R;
+import com.example.laba5.api.CatApi;
+import com.example.laba5.api.model.PhotoDTO;
+import com.example.laba5.api.model.PostGet;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.mirea.lab5.MainActivity;
-import ru.mirea.lab5.R;
-import ru.mirea.lab5.api.CatApi;
-import ru.mirea.lab5.api.model.PhotoDTO;
-import ru.mirea.lab5.api.model.PostGet;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,7 +72,7 @@ public class Tab2 extends Fragment {
                 t.printStackTrace();
             }
         });
-        textView.setText(R.string.tab_text_2);
+
         return view;
     }
 
@@ -99,7 +101,7 @@ public class Tab2 extends Fragment {
 
     private void createRecyclerView() {
         if (photos.size() != 0) {
-            textView.setText(R.string.last_like);
+
             layoutManager = new GridLayoutManager(getActivity(), 2);
             recyclerView.setLayoutManager(layoutManager);
             adapterFavourites = new AdapterFavourites(getActivity(), photos);

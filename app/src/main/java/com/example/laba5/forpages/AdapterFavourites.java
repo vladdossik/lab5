@@ -10,11 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.laba5.R;
+import com.example.laba5.api.model.PhotoDTO;
 
 import java.util.List;
-
-import ru.mirea.lab5.R;
-import ru.mirea.lab5.api.model.PhotoDTO;
 
 public class AdapterFavourites extends RecyclerView.Adapter<AdapterFavourites.ItemViewHolder> {
         private Context context;
@@ -43,7 +42,7 @@ public class AdapterFavourites extends RecyclerView.Adapter<AdapterFavourites.It
             Glide.with(context)
                     .load(imageUrl)
                     .centerCrop()
-                    .placeholder(R.drawable.icon)
+                    .placeholder(R.drawable.ic_launcher_background)
                     .into(viewHolder.imageView);
         }
 

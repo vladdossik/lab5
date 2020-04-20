@@ -17,18 +17,20 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.laba5.MainActivity;
+import com.example.laba5.R;
+import com.example.laba5.api.CatApi;
+import com.example.laba5.api.model.BreedDTO;
+import com.example.laba5.api.model.PhotoDTO;
+import com.example.laba5.api.model.PostGet;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Headers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.mirea.lab5.MainActivity;
-import ru.mirea.lab5.R;
-import ru.mirea.lab5.api.CatApi;
-import ru.mirea.lab5.api.model.BreedDTO;
-import ru.mirea.lab5.api.model.PhotoDTO;
-import ru.mirea.lab5.api.model.PostGet;
+
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
