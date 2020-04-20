@@ -21,9 +21,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.mirea.lab5.MainActivity;
-import ru.mirea.lab5.R;
-import ru.mirea.lab5.api.CatApi;
+
 import ru.mirea.lab5.api.model.PhotoDTO;
 import ru.mirea.lab5.api.model.PostCreate;
 import ru.mirea.lab5.api.model.Vote;
