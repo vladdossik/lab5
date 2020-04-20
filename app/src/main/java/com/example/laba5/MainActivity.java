@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.laba5.forpages.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -14,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;
     private ViewPager viewPager;
     private TabItem tab1, tab2;
-    private SectionsPagerAdapter pagerAdapter;
-    //public final static String USER_ID ="user4358497563948543";
+   // private SectionsPagerAdapter pagerAdapter;
+    public final static String USER_ID ="user4358497563948543";
     public final static String URL = "https://api.thecatapi.com/v1/";
 
 
