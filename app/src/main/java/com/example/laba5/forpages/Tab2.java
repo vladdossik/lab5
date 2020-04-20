@@ -1,29 +1,29 @@
 package com.example.laba5.forpages;
 
-
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.laba5.MainActivity;
 import com.example.laba5.R;
 import com.example.laba5.api.CatApi;
 import com.example.laba5.api.model.PhotoDTO;
 import com.example.laba5.api.model.PostGet;
+import com.example.laba5.forpages.AdapterFavourites;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +59,7 @@ public class Tab2 extends Fragment {
             @Override
             public void onResponse(retrofit2.Call<List<PostGet>> call, retrofit2.Response<List<PostGet>> response) {
                 if (response.isSuccessful()) {
+                    Log.d("daniel", "история " + response.code());
                     photos.clear();
                     posts.clear();
                     posts = new ArrayList<PostGet> (response.body());
@@ -101,7 +102,6 @@ public class Tab2 extends Fragment {
 
     private void createRecyclerView() {
         if (photos.size() != 0) {
-
             layoutManager = new GridLayoutManager(getActivity(), 2);
             recyclerView.setLayoutManager(layoutManager);
             adapterFavourites = new AdapterFavourites(getActivity(), photos);

@@ -1,7 +1,14 @@
 package com.example.laba5.forpages;
 
-
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,17 +19,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.laba5.MainActivity;
 import com.example.laba5.R;
 import com.example.laba5.api.CatApi;
 import com.example.laba5.api.model.BreedDTO;
 import com.example.laba5.api.model.PhotoDTO;
 import com.example.laba5.api.model.PostGet;
+import com.example.laba5.forpages.AdapterBreed;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +33,6 @@ import java.util.List;
 import okhttp3.Headers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -92,7 +94,7 @@ public class Tab1 extends Fragment {
             @Override
             public void onResponse(retrofit2.Call<List<PhotoDTO>> call, retrofit2.Response<List<PhotoDTO>> response) {
                 if (response.isSuccessful()) {
-
+                    Log.d("daniel", "onResponse " + response.body());
                     PhotoDTO.imagesCount = Double.parseDouble(response.headers().get("pagination-count"));
                     photos.addAll(response.body());
                     searchLikes();

@@ -1,14 +1,14 @@
 package com.example.laba5;
 
+
 import android.os.Bundle;
 
-import com.example.laba5.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import com.example.laba5.forpages.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
 
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;

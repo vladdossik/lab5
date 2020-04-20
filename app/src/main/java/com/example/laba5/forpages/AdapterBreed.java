@@ -21,14 +21,11 @@ import com.example.laba5.api.model.PostCreate;
 import com.example.laba5.api.model.Vote;
 
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-
 
 public class AdapterBreed extends RecyclerView.Adapter<AdapterBreed.ItemViewHolder> {
     private Context context;
@@ -96,7 +93,7 @@ public class AdapterBreed extends RecyclerView.Adapter<AdapterBreed.ItemViewHold
                         }
                     });
                 }
-                 else if (list.get(position).isLike() == 1) {
+                else if (list.get(position).isLike() == 1) {
                     list.get(position).setLike(-1);
                     postCreate.setValue(-1);
                     Call<Void> call = api.delVote(list.get(position).getId());
@@ -147,7 +144,7 @@ public class AdapterBreed extends RecyclerView.Adapter<AdapterBreed.ItemViewHold
                         @Override
                         public void onResponse(Call<Void> call, Response<Void> response) {
                             if (response.isSuccessful()) {
-
+                                Log.d("daniel", "Дизайк убран " + response.code());
                                 Toast.makeText(context, "Дизлайк убран", Toast.LENGTH_SHORT).show();
                             }
                         }

@@ -7,7 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.laba5.R;
-
+import com.example.laba5.forpages.Tab1;
+import com.example.laba5.forpages.Tab2;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
