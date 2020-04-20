@@ -1,4 +1,4 @@
-package ru.mirea.lab5.api.model;
+package com.example.laba5.api.model;
 
 import com.google.gson.annotations.SerializedName;
 

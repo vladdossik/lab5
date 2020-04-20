@@ -1,4 +1,10 @@
-package ru.mirea.lab5.api;
+package com.example.laba5.api;
+
+import com.example.laba5.api.model.BreedDTO;
+import com.example.laba5.api.model.PhotoDTO;
+import com.example.laba5.api.model.PostCreate;
+import com.example.laba5.api.model.PostGet;
+import com.example.laba5.api.model.Vote;
 
 import java.util.List;
 
@@ -10,11 +16,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import ru.mirea.lab5.api.model.BreedDTO;
-import ru.mirea.lab5.api.model.PhotoDTO;
-import ru.mirea.lab5.api.model.PostCreate;
-import ru.mirea.lab5.api.model.PostGet;
-import ru.mirea.lab5.api.model.Vote;
+
 
 public interface CatApi {
     @Headers("x-api-key: 9442c6b9-5419-424f-9a41-1fb096fe582d")

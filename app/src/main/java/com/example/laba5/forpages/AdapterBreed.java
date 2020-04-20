@@ -13,6 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.laba5.MainActivity;
+import com.example.laba5.R;
+import com.example.laba5.api.CatApi;
+import com.example.laba5.api.model.PhotoDTO;
+import com.example.laba5.api.model.PostCreate;
+import com.example.laba5.api.model.Vote;
 
 import java.util.List;
 
@@ -22,9 +28,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import ru.mirea.lab5.api.model.PhotoDTO;
-import ru.mirea.lab5.api.model.PostCreate;
-import ru.mirea.lab5.api.model.Vote;
+
 
 public class AdapterBreed extends RecyclerView.Adapter<AdapterBreed.ItemViewHolder> {
     private Context context;
@@ -66,7 +70,7 @@ public class AdapterBreed extends RecyclerView.Adapter<AdapterBreed.ItemViewHold
         Glide.with(context)
                 .load(imageUrl)
                 .centerCrop()
-                .placeholder(R.drawable.icon)
+                .placeholder(R.drawable.ic_launcher_background)
                 .into(viewHolder.imageView);
         final PostCreate postCreate = new PostCreate(MainActivity.USER_ID, list.get(position).getImageId());
 
