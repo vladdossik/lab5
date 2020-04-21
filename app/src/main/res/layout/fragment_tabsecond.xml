@@ -7,8 +7,10 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:padding="150dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:textColor="#ffffff"
+        android:text="SecondFragment" />
 
 </FrameLayout>
