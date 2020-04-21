@@ -28,7 +28,7 @@ import ru.mirea.lab5.api.model.PostGet;
  * A simple {@link Fragment} subclass.
  */
 public class Tab2 extends Fragment {
-    private TextView textView;
+
     private AdapterFavourites adapterFavourites;
     private RecyclerView recyclerView;
     private ArrayList<PostGet> posts;
@@ -46,7 +46,7 @@ public class Tab2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab2, container, false);
-        textView = (TextView) view.findViewById(R.id.tab2_text);
+
         recyclerView = (RecyclerView) view.findViewById(R.id.tab2_recycle_view);
         recyclerView.setVisibility(View.GONE);
         retrofit = new Retrofit.Builder()
@@ -101,7 +101,7 @@ public class Tab2 extends Fragment {
 
     private void createRecyclerView() {
         if (photos.size() != 0) {
-            textView.setText(R.string.last_like);
+
             layoutManager = new GridLayoutManager(getActivity(), 1);
             recyclerView.setLayoutManager(layoutManager);
             adapterFavourites = new AdapterFavourites(getActivity(), photos);
