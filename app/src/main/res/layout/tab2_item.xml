@@ -5,8 +5,8 @@
 
     <LinearLayout
         android:id="@+id/tab2_list_item"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
 

@@ -2,17 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.main.Tab1">
 
-    <TextView
-        android:id="@+id/selection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp" />
 
     <Spinner
         android:id="@+id/breeds"
-        android:text="Поиск"
+        android:text="@string/breeds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="20dp"
