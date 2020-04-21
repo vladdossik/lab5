@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:id="@+id/tab1_list_item"
-        android:layout_width="300dp"
+        android:layout_width="360dp"
         android:layout_height="400dp"
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
@@ -25,20 +25,20 @@
 
             <ImageButton
                 android:id="@+id/tab1_item_image_bottom_like"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/like"
+                android:src="@drawable/ic_like"
                 android:padding="5dp"/>
 
             <ImageButton
                 android:id="@+id/tab1_item_image_bottom_dislike"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@null"
                 android:scaleType="fitCenter"
-                android:src="@drawable/dislike"
+                android:src="@drawable/ic_dis"
                 android:padding="5dp"/>
 
         </LinearLayout>
