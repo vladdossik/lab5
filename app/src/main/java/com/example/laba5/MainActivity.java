@@ -1,19 +1,17 @@
 package com.example.laba5;
 
-
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
+import com.example.laba5.R;
+import com.example.laba5.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;
     private ViewPager viewPager;
     private TabItem tab1, tab2;
-    private PagerAdapter pagerAdapter;
+    private SectionsPagerAdapter pagerAdapter;
     public final static String USER_ID ="user4358497563948543";
     public final static String URL = "https://api.thecatapi.com/v1/";
 
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         tab1 = (TabItem)findViewById(R.id.tab1);
         tab2 = (TabItem)findViewById(R.id.tab2);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabs.getTabCount());
+        pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabs.getTabCount());
         viewPager.setAdapter(pagerAdapter);
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
