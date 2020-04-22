@@ -29,21 +29,19 @@ public interface CatApi {
                                           @Query("page") int page
     );
 
-    @Headers("x-api-key: 9442c6b9-5419-424f-9a41-1fb096fe582d")
+    @Headers("x-api-key: 43ceed6e-a972-48da-934c-b999b2382222")
     @GET("votes")
     Call<List<PostGet>> getVotes(@Query("sub_id") String sub_id);
 
-    @Headers("x-api-key: 9442c6b9-5419-424f-9a41-1fb096fe582d")
+    @Headers("x-api-key: 43ceed6e-a972-48da-934c-b999b2382222")
     @GET("images/{image_id}")
-    Call<PhotoDTO> getVotesLike(@Path("image_id") String image_id
-    );
+    Call<PhotoDTO> getVotesLike(@Path("image_id") String image_id);
 
-    @Headers("x-api-key: 9442c6b9-5419-424f-9a41-1fb096fe582d")
+    @Headers("x-api-key: 43ceed6e-a972-48da-934c-b999b2382222")
     @DELETE("votes/{vote_id}")
-    Call<Void> delVote(@Path("vote_id") int vote_id
-    );
+    Call<Void> delVote(@Path("vote_id") int vote_id);
 
-    @Headers("x-api-key: 9442c6b9-5419-424f-9a41-1fb096fe582d")
+    @Headers("x-api-key: 43ceed6e-a972-48da-934c-b999b2382222")
     @POST("votes")
     Call<Vote> setPostFavourites(@Body PostCreate postCreate);
 

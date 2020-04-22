@@ -15,8 +15,6 @@ import ru.mirea.lab5.R;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     private int numberOfTabs;
-    @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
 
     public SectionsPagerAdapter(FragmentManager fm, int numberOfTabs) {
         super(fm);
