@@ -47,7 +47,6 @@ public class Tab1 extends Fragment {
     private Retrofit retrofit;
     private ArrayList<BreedDTO> breeds;
     private ArrayList<PhotoDTO> photos;
-    private ProgressBar progressBar;
     private GridLayoutManager layoutManager;
     private CatApi api;
 
@@ -57,7 +56,7 @@ public class Tab1 extends Fragment {
     private int pastVisibleItems, totalItemCount, visibleItemCount, previousTotal = 0;
     private int viewThreshold = 10;
     private ArrayAdapter<String> adapterArr;
-    private Headers headers;
+    
 
 
     public Tab1() {
@@ -70,8 +69,6 @@ public class Tab1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab1, container, false);
         spinner = (Spinner) view.findViewById(R.id.breeds);
-
-        progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         recyclerView = (RecyclerView) view.findViewById(R.id.tab1_recycle_view);
         retrofit = new Retrofit.Builder()
                 .baseUrl(MainActivity.URL)
@@ -157,7 +154,7 @@ public class Tab1 extends Fragment {
     }
 
     private void performPageination() {
-        progressBar.setVisibility(VISIBLE);
+
         api.getPhotoForBreed(PhotoDTO.breeds_id, item_count, "desc", pager_number).enqueue(new retrofit2.Callback<List<PhotoDTO>>() {
             @Override
             public void onResponse(retrofit2.Call<List<PhotoDTO>> call, retrofit2.Response<List<PhotoDTO>> response) {
@@ -170,7 +167,6 @@ public class Tab1 extends Fragment {
                     }
                     recyclerView.setVisibility(View.VISIBLE);
                 }
-                progressBar.setVisibility(GONE);
             }
 
             @Override
