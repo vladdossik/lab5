@@ -11,14 +11,12 @@
         android:text="@string/breeds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
         android:paddingTop="35dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id='@+id/tab1_recycle_view'
         android:layout_width="match_parent"
         android:layout_height="640dp"
-        android:layout_above="@+id/progress_bar"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
