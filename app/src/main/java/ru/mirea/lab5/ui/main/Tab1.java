@@ -168,7 +168,7 @@ public class Tab1 extends Fragment {
                     }
                     recyclerView.setVisibility(View.VISIBLE);
                 }
-              
+
             }
 
             @Override
