@@ -47,10 +47,8 @@ public class Tab1 extends Fragment {
     private Retrofit retrofit;
     private ArrayList<BreedDTO> breeds;
     private ArrayList<PhotoDTO> photos;
-    private ProgressBar progressBar;
     private GridLayoutManager layoutManager;
     private CatApi api;
-
     private int pager_number = 0;
     private int item_count = 10;
     private boolean isLoading = true;
@@ -58,8 +56,6 @@ public class Tab1 extends Fragment {
     private int viewThreshold = 10;
     private ArrayAdapter<String> adapterArr;
     private Headers headers;
-
-
     public Tab1() {
         photos = new ArrayList<>();
         breeds = new ArrayList<>();
@@ -90,7 +86,6 @@ public class Tab1 extends Fragment {
             @Override
             public void onResponse(retrofit2.Call<List<PhotoDTO>> call, retrofit2.Response<List<PhotoDTO>> response) {
                 if (response.isSuccessful()) {
-                    Log.d("daniel", "onResponse " + response.body());
                     PhotoDTO.imagesCount = Double.parseDouble(response.headers().get("pagination-count"));
                     photos.addAll(response.body());
                     searchLikes();
@@ -164,7 +159,6 @@ public class Tab1 extends Fragment {
                         List<PhotoDTO> responseData = response.body();
                         adapterBreed.addImages(responseData);
                     } else {
-                        //Toast.makeText(getActivity(), "Контента больше нет", Toast.LENGTH_SHORT).show();
                     }
                     recyclerView.setVisibility(View.VISIBLE);
                 }
