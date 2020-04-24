@@ -164,7 +164,7 @@ public class Tab1 extends Fragment {
                         List<PhotoDTO> responseData = response.body();
                         adapterBreed.addImages(responseData);
                     } else {
-                        Toast.makeText(getActivity(), "Контента больше нет", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), "Контента больше нет", Toast.LENGTH_SHORT).show();
                     }
                     recyclerView.setVisibility(View.VISIBLE);
                 }
