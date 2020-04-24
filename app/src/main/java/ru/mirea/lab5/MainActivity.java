@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tabs = (TabLayout) findViewById(R.id.tabs);
-        tab1 = (TabItem)findViewById(R.id.tab1);
-        tab2 = (TabItem)findViewById(R.id.tab2);
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        tab1 = (TabItem)findViewById(R.id.search);
+        tab2 = (TabItem)findViewById(R.id.likes);
+        viewPager = (ViewPager) findViewById(R.id.view);
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), tabs.getTabCount());
         viewPager.setAdapter(pagerAdapter);
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
